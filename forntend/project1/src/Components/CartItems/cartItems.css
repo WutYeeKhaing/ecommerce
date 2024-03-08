@@ -3,7 +3,7 @@
 }
 .cartitem hr{
     height: 2px;
-    background-color: rgb(167, 163, 163);
+    background-color: rgb(221, 221, 221);
     border: none;
 }
 .cart-format{
@@ -84,8 +84,65 @@
     width: 100px;
     height: 50px;
     font-size: 15px;
+    font-weight: 600;
     background-color: rgb(47, 46, 46);
+    border-radius: 5px;
     color: rgb(157, 90, 157);
     border: none;
     cursor: pointer;
+}
+@media(max-width:1280px) {
+    .cartitem{
+        margin: 60px 50px;
+    }
+    .cart-format{
+        grid-template-columns: 0.5fr 3fr 0.5fr 0.5fr 0.5fr 0.5fr;
+        gap: 20px;
+        padding: 15px 0px;
+        font-size: 15px;
+    }
+   .img-cart{
+        height: 50px;
+   }
+   .cart-remove{
+        margin: auto;
+   }
+   .quantity{
+        width: 30px;
+        height: 30px;
+   }
+   .cart-down{
+        margin: 80px 0px;
+        flex-direction: column;
+        gap: 80px;
+   }
+   .total-cart{
+        margin: 0;
+   }
+   .total-cart  button{
+        max-width: 200px;
+        height: 45px;
+        font-size: 13px;
+   }
+   .promobox{
+        width: auto;
+        max-width: 385px;
+   }
+   .promobox input{
+        width: 100%;
+   }
+   .promobox button{
+        width: 100px;
+        margin-left: -104px;
+   }
+}
+@media(max-width:500px) {
+    .main{
+        display: none;
+    }
+    .cart-format{
+        display: gird;
+        grid-template-columns: .5fr 3fr .5fr;
+        gap: 20px;
+    }
 }
