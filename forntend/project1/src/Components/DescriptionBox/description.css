@@ -28,3 +28,38 @@
     padding-bottom: 40px;
     font-size: 14px;
 }
+@media (max-width: 1280px) {
+    .descriptionbox {
+        margin: 60px; 
+    }
+}
+
+@media (max-width: 1024px) {
+    .descriptionbox {
+        margin: 60px 20px; 
+    }
+    .des-des{
+        font-size: 14px;
+    }
+  
+}
+
+@media (max-width: 800px) {
+    .descriptionbox {
+        margin: 60px 20px; 
+    }
+    
+    .des-des {
+        padding: 20px; 
+        font-size: 13px; 
+    }
+}
+
+@media (max-width: 500px) {
+    .descriptionbox {
+        margin: 40px; 
+    }
+    .des-nav-box {
+        width: 100%; 
+    }
+}
