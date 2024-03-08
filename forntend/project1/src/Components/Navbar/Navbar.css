@@ -1,3 +1,8 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 .navbar{
     display: flex;
     justify-content: space-around;
@@ -31,15 +36,49 @@
     justify-content: center;
     gap: 3px;      
     cursor: pointer;
-
 } 
-
 .navmenu hr{
     border: none;
     width:80%;
     height: 3px;
     border-radius: 10px;
-    background-color: rgb(41, 4, 78);
+    background-color: blueviolet;
+}
+.toggle-btn {
+    display: none;
+}
+    
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 45px;
+    width: 300px;
+    height: 0;
+    background-color: rgba(171, 171, 171, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    z-index: 1;
+}
+    
+.dropdown-menu.show {
+        height: auto;
+}
+    
+.dropdown-menu li {
+    padding: .6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.dropdown-links li {
+    padding: 0.5rem;
+    transition: background-color 0.3s;
+}
+.dropdown-links li:hover {
+    background-color: rgb(192, 152, 190);
 }
 .nav-login-cart{
     display: flex;
@@ -47,8 +86,8 @@
     gap: 45px;
 }
 .nav-login-cart button{
-    width: 150px;
-    height: 50px;
+    width: 140px;
+    height: 45px;
     outline: none;
     border: 1px solid rgb(236, 183, 121);
     border-radius: 50px;
@@ -73,4 +112,135 @@
     font-size: 12px;
     background-color: rgb(16, 16, 16);
     color: rgb(243, 236, 236);
+}
+.toggle-btn {
+    display: none;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 55px;
+    width: 300px;
+    height: 0;
+    background-color: rgba(215, 215, 215, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.dropdown-menu.show {
+    height: auto;
+}
+.dropdown-menu li {
+    padding: .6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+@media (max-width: 1280px) {
+    .nav_logo{
+        height: 35px;
+    }
+    .nav_logo p{
+        font-size: 30px;
+        margin-right: 20px;
+    }
+    .navmenu{
+        font-size: 19px;
+        gap: 40px;
+    }
+    .navmenu li{
+        gap: 2px;
+    }
+   .nav-login-cart button{
+       width: 120px;
+       height: 43px;
+       font-size: 18px;
+   }
+   .nav-login-cart img{
+       padding-top: 5px;
+   }
+ 
+}
+
+@media (max-width: 1024px) {
+    .nav_logo{
+        height: 33px;
+    }
+    .nav_logo p{
+        font-size: 23px;
+        margin-right: 20px;
+    }
+    .navmenu{
+        font-size: 17px;
+        gap: 40px;
+    }
+    .navmenu li{
+        gap: 1px;
+    }
+   .nav-login-cart button{
+       width: 100px;
+       height: 40px;
+       font-size: 18px;
+       margin-left: 30px;
+   }
+}
+
+@media (max-width: 800px) {
+    .navmenu,
+    .nav-login-cart button {
+        display: none;
+    }
+    .toggle-btn {
+        display: block;
+        font-size: 1.7rem;
+        cursor: pointer;
+        padding-top: 10px;
+    }
+    .nav_logo{
+        height: 40px;
+     }
+     .nav_logo p{
+         font-size: 28px;
+     }
+    .navmenu li {
+        gap: 30px;
+    }
+    .dropdown-menu {
+        display: block;
+    }
+
+}
+
+@media (max-width: 500px) {
+    .navmenu,
+    .nav-login-cart button {
+        display: none;
+    }
+    .toggle-btn {
+        display: block;
+        font-size: 1.5rem;
+        cursor: pointer;
+        padding-top: 5px;
+    }
+    .nav_logo{
+       height: 40px;
+    }
+    .nav_logo p{
+        font-size: 28px;
+    }
+    .nav-cart-count{
+        margin-right: 30px;
+    }
+    .toggle-btn {
+        display: block;
+    }
+
+    .dropdown-menu {
+        display: block;
+    }
 }

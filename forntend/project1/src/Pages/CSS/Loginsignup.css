@@ -6,7 +6,7 @@
 }
 .login-container{
     width: 500px;
-    height: 500px;
+    height: 550px;
     background-color: rgb(250, 238, 253);
     margin: auto;
     padding: 30px 70px;
@@ -18,7 +18,7 @@
     display:flex;
     flex-direction: column; 
     gap:15px;
-    margin-top: 50px;
+    margin-top: 30px;
 }
 .loginsignup-field input{
     height: 40px;
@@ -30,12 +30,12 @@
     font-size: 15px;
 }
 .login-container button{
-    width: 450px;
+    width: 300px;
     height: 40px;
     color: rgb(52, 37, 12);
     background-color: rgb(249, 224, 249);
     border: none;
-    margin: 30px 40px;
+    margin: 30px 30px;
     font-size: 17px;
     font-weight: 600;
     cursor: pointer;
@@ -56,7 +56,7 @@
 .login-agree{
     display: flex;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 10px;
     gap: 10px;
     color:rgb(102, 100, 100);
     font-size: 14px;
@@ -64,12 +64,12 @@
 }
 @media(max-width:1280px) {
     .login{
-        padding-top: 60px;
+        padding-top: 40px;
     }
     .login-container{
         width: auto;
-        max-width: 500px;
-        max-height: 500px;
+        max-width: 550px;
+        max-height: 550px;
     }
     .login-container h1{
         margin: 10px 0px;
@@ -80,10 +80,12 @@
     }
     .loginsignup-field input{
         height: 40px;
-        width: 90%;;
+        width: 100%;;
     }
-    .login-container button{
-        width: 80%;
+    .login-container button {
+        width: 320px;
+        margin: 30px 40px;
+        font-size: 16px;
     }
     .loginsignup-agree{
         font-size: 14px;
@@ -93,28 +95,28 @@
 
 @media (max-width: 800px) {
     .loginsignup {
-        padding-top: 60px;
+        padding-top: 40px;
     }
     .login-container {
-        padding: 30px;
+        padding:  20px 45px;
     }
     .login-container h1{
         font-size: 24px;
     }
     .loginsignup-field {
-        padding-top: 10px;
+        padding-top: 20px;
     }
     .loginsignup-field input{
-        width: 85%;
+        width: 90%;
         height: 40px;
     }
     .login-container button {
         width: 300px;
-        margin: 30px 70px;
+        margin: 30px 40px;
         font-size: 16px;
     }
     .login{
-        padding: 10px;
+        padding: 15px;
     }
     .login-agree {
         margin-top: 20px;
@@ -123,25 +125,25 @@
 
 @media (max-width: 500px) {
     .loginsignup {
-        padding-top: 60px;
+        padding-top: 20px;
     }
     .login-container {
         width: auto;
         max-width: 90%;
-        max-height: 70%;
+        max-height: 90%;
         padding: 40px;
     }
     .login-container button {
-        width: 150px;
-        margin: 20px 60px;
+        width: 200px;
+        margin: 30px 50px;
     }
     .login{
         padding-top: 10px;
         font-size: 15px;
     }
     .loginsignup-field input{
-        width: 75%;
-        height: 40px;
+        width: 100%;
+        height: 45px;
     }
     .login-agree {
         margin-top: 10px;
