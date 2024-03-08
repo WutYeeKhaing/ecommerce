@@ -1,0 +1,10 @@
+.bread{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color:rgb(56, 54, 54);
+    font-size: 17px;
+    font-weight: 300;
+    margin: 30px 130px;
+    text-transform: capitalize;
+}
