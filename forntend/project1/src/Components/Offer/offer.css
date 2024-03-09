@@ -1,5 +1,5 @@
 .offers{
-    width: 50%;
+    width: 60%;
     height: 50vh;
     display: flex;
     margin: auto;
@@ -52,9 +52,10 @@ offers-left{
 }
 @media(max-width:1280px){
     .offers{
-        padding: 0px 80px;
+        padding: 0px 90px;
         margin-bottom: 80px;
         margin-top: -70px;
+        width: 800px;
     }
     .offers-left h1{
         font-size: 40px;
@@ -63,7 +64,7 @@ offers-left{
         font-size: 18px;
     }
     .offers-right img{
-         width: 300px;
+         width: 250px;
     }
     .offers-left button{
         width: 220px;
@@ -78,20 +79,21 @@ offers-left{
     .offers{
         margin-bottom: 60px;
         height: 40vh;
-        margin-top: -70px;
+        width: 600px;
+        margin-top: -80px;
 
     }
     .offers-left h1{
-        font-size: 30px;
+        font-size: 28px;
     }
     .offers-left p{
         font-size: 16px;
     }
     .offers-right img{
-         width: 200px;
+         width: 160px;
     }
     .offers-left button{
-        width: 160px;
+        width: 140px;
         height: 40px;
         font-size: 16px;
     }
@@ -101,7 +103,8 @@ offers-left{
 }
 @media(max-width:800px){
     .offers{
-        padding: 0 90px;
+        padding: 0 70px;
+        width: 500px;
         height: 30vh;
         margin-bottom: 50px;
         margin-top: -140px;
@@ -113,11 +116,11 @@ offers-left{
         font-size: 14px;
     }
     .offers-right img{
-         width: 150px;
-         padding-right: 30px;
+         width: 130px;
+         padding-right: 20px;
     }
     .offers-left button{
-        width: 140px;
+        width: 120px;
         height: 30px;
         font-size: 12px;
     }
@@ -128,7 +131,8 @@ offers-left{
 @media(max-width:500px){
     .offers{
         padding: 0 90px;
-        height: 25vh;
+        height: 26vh;
+        width: 400px;
         margin-bottom: 50px;
         margin-top: -140px;
     }
