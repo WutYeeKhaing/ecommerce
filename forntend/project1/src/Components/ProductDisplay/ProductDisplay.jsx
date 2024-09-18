@@ -1,4 +1,4 @@
-import React ,{useContext} from "react";
+import React, { useContext, useState } from "react";
 import './productdisplay.css';
 import star from'../Assests/star_icon.png';
 import star_dull from '../Assests/star_dull_icon.png';
@@ -6,6 +6,18 @@ import { ShopContext } from '../../Context/ShopContext';
 const ProductDisplay = (props) =>{
     const {product}= props;
     const { addToCart } = useContext(ShopContext);
+    const [selectedSize, setSelectedSize] = useState("");
+    const handleSizeSelect =(size)=>{
+        setSelectedSize(size);
+    }
+    //handle add to cart with selected size//
+    const handleAddToCart =()=>{
+        if (!selectedSize){
+            alert("please select a size before adding to cart")
+            return;
+        }
+        addToCart(product.id,selectedSize);
+    }
  return(
     <div className="pdisplay">
         <div className="product-left">
@@ -40,14 +52,18 @@ const ProductDisplay = (props) =>{
             <div className="right-size">
                 <h1>Select Size</h1>
                 <div className="right-sizes">
-                    <div>S</div>
-                    <div>M</div>
-                    <div>L</div>
-                    <div>XL</div>
-                    <div>XXL</div>
+            {['S', 'M', 'L', 'XL', 'XXL'].map((size) => (
+              <div
+                key={size}
+                className={`size-option ${selectedSize === size ? 'selected' : ''}`}
+                onClick={() => handleSizeSelect(size)}
+              >
+                {size}
+              </div>
+            ))}
                 </div>
             </div>
-            <button onClick={()=>{ addToCart(product.id)}}>ADD TO CART</button>
+            <button onClick={handleAddToCart}>ADD TO CART</button>
             <p className="right-category">
                 <span>Category:</span>
                 Women,T-Shirt,Crop-top

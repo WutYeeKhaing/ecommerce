@@ -44,11 +44,12 @@
     width: 250px;
     height: 45px;
     border-radius: 50px;
-    margin-top: 25px;
+    margin-top: 10px;
     background: rgb(137, 104, 140);
     color: rgb(255, 242, 224);
     font-size: 15px;
     font-weight: 500;
+    cursor: pointer;
 }
 
 .hero-right img {
@@ -80,7 +81,7 @@
         gap: 10px;
         width: 250px;
         height: 60px;
-        margin: 20px;
+       
     }
     .hero-right img{
         width: 500px;
@@ -109,7 +110,7 @@
         width: 220px;
         height: 40px;
         font-size: 12px;
-        margin: 15px;
+      
     }
     .hero-right img{
         width: 400px; 
@@ -117,8 +118,11 @@
 }
 
 @media (max-width: 800px) {
+    .hero{
+        height: 45vh;
+    }
     .hero-left {
-        padding-left: 40px;
+        padding-left: 80px;
     }
 
     .hero-left h2 {
@@ -134,23 +138,31 @@
     }
 
     .hero-lastest-btn {
-        width: 180px;
-        height: 35px;
+        width: 200px;
+        height: 40px;
         font-size: 10px;
-        margin: 10px;
+        
     }
     .hero-right img{
-        width: 400px; 
+        width: 250px;
+        height: 370px;
     }
 }
 
 @media (max-width: 500px) {
     .hero{
         flex-direction: column;
+        height: 40vh;
+        align-items: center;
     }
 
     .hero-right {
         display: none;
+    }
+    .hero-left {
+        width: 100%; /* Take full width */
+        align-items: center; /* Center the content */
+        padding-left: 0; /* Remove left padding */
     }
 
     .hero-left h2 {
@@ -165,6 +177,6 @@
         width: 220px;
         height: 40px;
         font-size: 13px;
-        margin: 0;
+       
     }
 }

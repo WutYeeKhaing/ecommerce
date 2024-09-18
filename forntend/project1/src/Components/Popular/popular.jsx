@@ -1,5 +1,5 @@
 import React from "react";
-import './popular.css';
+import '../../Components/Newcollection/newcollection.css'
 import data_product from '../Assests/data'
 import Item from "../Item/item";
 const Popular=()=>{

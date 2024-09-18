@@ -5,22 +5,22 @@ import cart_icon from '../Assests/cart_icon.png'
 import {Link} from 'react-router-dom';
 import { ShopContext } from "../../Context/ShopContext";
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-import {faCheck,faTimes} from '@fortawesome/free-solid-svg-icons'
+import {faBars,faTimes} from '@fortawesome/free-solid-svg-icons'
 
 const Navbar=()=>{
     const[menu,setMenu]=useState("shop");
     const {getTotalCartItems}=useContext(ShopContext);
     const [menuOpen, setMenuOpen] = useState(false);
-    const [toggleIcon, setToggleIcon] = useState(faCheck);
+    const [toggleIcon, setToggleIcon] = useState(faBars);
 
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
-        setToggleIcon(menuOpen ? faCheck : faTimes);
+        setToggleIcon(menuOpen ? faBars : faTimes);
     }
 
     const handleDropItem = () => {
         setMenuOpen(false);
-        setToggleIcon(faCheck);
+        setToggleIcon(faBars);
     }
     return(   
      <div className="navbar">
@@ -48,7 +48,7 @@ const Navbar=()=>{
             <Link to='/login'>
             <button>Login</button>
             </Link>
-            <Link to='/cart'><img src={cart_icon} alt=""/></Link>
+            <Link to='/cart'><img src={cart_icon} alt="" className="cart"/></Link>
             <div className="nav-cart-count">{getTotalCartItems()}</div>
         </div>
         <div className='toggle-btn' onClick={toggleMenu}>

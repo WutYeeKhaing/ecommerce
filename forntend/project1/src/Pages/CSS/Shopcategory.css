@@ -1,34 +1,52 @@
-.shop-banner{
-   display: block;
-   margin: 40px auto;
-   width: 95%;
+.shopcategory {
+   
+    width: 100%;
+    background-color: #f7f7f7;
+    margin: auto;
+  
+  }
+.shop-banner {
+  width: 100%;
+ display: block;
+  max-width: 1200px;
+ 
 }
-.shop-indexsort{
+
+.shop-indexsort {
     display: flex;
-    margin:0 130px;
     justify-content: space-between;
     align-items: center;
-}
+  padding: 25px 20px;
+    width: 100%;
+ 
+  }
+  
 .shop-sort{
     padding: 5px 20px;
     border-radius: 50px;
     border:1px solid rgb(50, 48, 48)
 }
+.shop-sort select{
+    border: none;
+    outline: none;
+}
 .shop-indexsort p span{
     font-weight: 600;
 }
 .shopcategory-products{
-    margin: 70px 40px;
+    width: 98%;
+    margin-right: 0px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    row-gap: 15px;
+   gap: 40px;
 }
 .loadmore{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 150px auto;
+    margin: 50px auto;
     width:230px;
+    
     height: 60px;
     border-radius: 75px;
     background: plum;
@@ -36,62 +54,64 @@
     font-size: 18px;
     font-weight: 500;
 }
+.space{
+    height: 20px;
+}
 @media(max-width:1280px) {
-    .shop-banner{
-        margin:  20px auto;
-        width: 90%;
-    }
-    .shop-indexsort{
-        width: 90%;
-        margin: auto;
+    .shopcategory-products {
+        gap: 20px; /* Reduce the gap between grid items */
+        width: 100%; /* Narrow the width to avoid extra space */
+        margin: 0 auto; /* Center the grid */
     }
     .shop-sort{
-        padding: 5px 10px;
+       
         font-size: 12px;
     }
     .shop-indexsort p{
         font-size: 12px;
     }
-    .shopcategory-products{
-        width: 95%;
-        margin: 5px auto;
-        row-gap: 40px;
-    }
-    .shopcategory-products .item{
-        margin: auto;
-    }
+ 
+   
     .loadmore{
-        margin: 100px auto;
-        width: 200px;
-        height: 60px;
+       
+      
         font-size: 16px;
     }
 }
 @media(max-width:800px) {
-    .shop-banner{
-        margin: 20px auto;
-        width: 95%;
-    }
-    .shop-indexsort{
-        width: 95%;
-        margin: auto;
-    }
+  
     .loadmore{
-        margin: 60px auto;
+       
         width: 150px;
         height: 40px;
+        font-size: 15px;
     }
 }
 @media(max-width:500px) {
-    .shopcategory-products{
-        grid-template-columns: 1fr 1fr;
-        width: 90%;
-        margin-right: 10px;
+    .shopcategory-products {
+        grid-template-columns: 1fr 1fr; /* 2 columns for 500px screens */
+        gap: 20px; /* Reduce the gap between grid items */
+        width: 90%; /* Narrow the width to avoid extra space */
+        margin: 0 auto; /* Center the grid */
     }
-    .loadmore{
-        margin: 20px auto;
+
+    .loadmore {
+        width: 120px;
+        height: 35px;
+        font-size: 15px;
+    }
+}
+@media(max-width: 480px) {
+    .shopcategory-products {
+        grid-template-columns: 1fr; /* Single column layout for small screens */
+        width: 95%;
+        gap: 15px; /* Smaller gap for better alignment */
+        margin: 0 auto;
+    }
+
+    .loadmore {
         width: 100px;
         height: 30px;
-        font-size: 15px;
+        font-size: 14px;
     }
 }

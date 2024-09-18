@@ -104,6 +104,7 @@
         margin-bottom: 60px;
         gap: 15px;
         height: 35vh;
+        margin-top: -200px;
     }
     .newsletter h1{
         font-size: 18px;
