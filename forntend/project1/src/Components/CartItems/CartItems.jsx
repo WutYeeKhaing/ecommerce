@@ -1,10 +1,32 @@
-import React from "react";
+import React,{useState} from "react";
 import './cartItems.css';
 import { useContext } from "react";
 import { ShopContext } from "../../Context/ShopContext";
 import remove_icon from'../Assests/cart_cross_icon.png';
 const CartItems=()=>{
-    const{getTotalAmount,all_product,cartItems,removeFromCart}=useContext(ShopContext)
+    const{getTotalAmount,all_product,cartItems,removeFromCart}=useContext(ShopContext);
+    const [promoCode, setPromoCode] = useState('');
+
+    const handleCheckout = () => {
+      // Replace this with your navigation logic
+      // e.g., navigate('/checkout');
+      alert("Proceeding to checkout... Please confirm your items!");
+    };
+  
+    const handlePromoSubmit = () => {
+      if (!promoCode) {
+        alert("Please enter a promo code.");
+        return;
+      }
+  
+      // Validate the promo code
+      if (promoCode.toUpperCase() === "ED") {
+        alert(`Promo code "${promoCode}" applied! Enjoy your discount!`);
+        // Optionally, you can apply a discount here
+      } else {
+        alert(`Promo code "${promoCode}" is not valid. Please try again.`);
+      }
+    };
  return(
     <div className="cartitem">
         <div className="cart-format main">
@@ -53,13 +75,18 @@ const CartItems=()=>{
                     <h3>{getTotalAmount()}</h3>
                  </div>
                 </div>
-                <button>PROCEED TO CHECKOUT</button>
+                <button onClick={handleCheckout}>PROCEED TO CHECKOUT</button>
             </div>
             <div className="cart-promocode">
                 <p>If you have promo code ,Enter it here</p> 
                 <div className="promobox">
-                    <input type="text" placeholder="promo-code"/>
-                    <button>Submit</button>
+                <input
+            type="text"
+            placeholder="promo-code"
+            value={promoCode}
+            onChange={(e) => setPromoCode(e.target.value)}
+          />
+          <button onClick={handlePromoSubmit}>Submit</button>
                 </div>
                 </div>
          </div>

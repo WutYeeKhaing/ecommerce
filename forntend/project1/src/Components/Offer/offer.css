@@ -6,20 +6,23 @@
     padding: 0px 140px;
     border-radius: 5% 10% 20% 73%/60%;
     margin-bottom: 130px;
-    background: linear-gradient(180deg,rgb(240, 173, 240) 0%,rgb(187, 187, 202) 60%);
+    background: linear-gradient(180deg,rgb(243, 205, 246), rgb(249, 235, 235) 60%);
 }
-offers-left{
-    flex:1;
+.offers-left {
+    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center; /* Center items horizontally */
+    text-align: center; /* Center text inside the div */
 }
+
 .offers-left h1{
     color:rgb(21, 17, 17);
-    margin-top: 25px;
+    
     font-size: 40px;
     font-weight: 500;
-    width: 50%;
+    width: 80%;
 }
 .offers-left p{
     color:rgb(23, 18, 18);
@@ -30,16 +33,18 @@ offers-left{
     width: 200px;
     height: 40px;
     border-radius: 35px;
-    background-color:rgb(231, 220, 207);
-    color:rgb(31, 27, 27);
+    background: rgb(137, 104, 140);
+    color: white;
     font-size: 18px;
     font-weight: 500;
-    margin-top: 30px;
+    margin-top: 20px;
     cursor: pointer;
     border:none;
+    align-items: center;
 }
 .offers-left button:hover{
     background-color: rgb(145, 105, 183);
+    color: white;
 }
 .offers-right{
     flex:1;
@@ -60,9 +65,11 @@ offers-left{
     }
     .offers-left h1{
         font-size: 40px;
+        margin-bottom: 0px;
     }
     .offers-left p{
         font-size: 18px;
+        
     }
     .offers-right img{
          width: 250px;
@@ -106,24 +113,26 @@ offers-left{
     .offers{
         padding: 0 60px;
         width: 500px;
-        height: 30vh;
+        height: 32vh;
         margin-bottom: 50px;
         margin-top: -200px;
     }
     .offers-left h1{
         font-size: 20px;
+      
     }
     .offers-left p{
         font-size: 14px;
+       
     }
     .offers-right img{
          width: 130px;
-         padding-right: 20px;
+       
     }
     .offers-left button{
         width: 120px;
-        height: 25px;
-        font-size: 12px;
+        height: 30px;
+        font-size: 10px;
     }
     .offers-right{
         padding-top: 10px;
@@ -132,10 +141,10 @@ offers-left{
 @media(max-width: 560px){
     .offers{
         padding: 0 90px;
-        height: 26vh;
+       
         width: 400px;
         margin-bottom: 50px;
-        margin-top: -200px;
+       
     }
     .offers-left h1{
         font-size: 16px;
@@ -148,10 +157,37 @@ offers-left{
     }
     .offers-left button{
         width: 120px;
-        height: 25px;
-        font-size: 12px;
+        height: 30px;
+        font-size: 10px;
     }
     .offers-right{
         padding-top: 10px;
+    }
+}
+@media(max-width: 480px) {
+    .offers {
+        padding: 0 40px; /* Adjust padding */
+        width: 85%; /* Full width */
+        height: auto; /* Adjust height as needed */
+        margin-bottom: 50px; /* Adjust margin */
+        margin-top: -190px; /* Adjust as needed */
+    }
+    .offers-left h1 {
+        font-size: 12px; /* Smaller font size */
+    }
+    .offers-left p {
+        font-size: 8px; /* Smaller font size */
+    }
+    .offers-right img {
+        width: 100px; /* Adjust image size */
+    }
+    .offers-left button {
+        width: 100px; /* Adjust button size */
+        height: 25px; /* Adjust height */
+        font-size: 8px; /* Smaller font size */
+        margin-top: 5px;
+    }
+    .offers-right {
+        padding-top: 10px; /* Adjust padding */
     }
 }

@@ -57,6 +57,14 @@ const ProductDisplay = (props) =>{
                 key={size}
                 className={`size-option ${selectedSize === size ? 'selected' : ''}`}
                 onClick={() => handleSizeSelect(size)}
+                style={{
+                    backgroundColor: selectedSize === size ? 'rgb(145, 105, 183)' : 'white',  // Black when selected, white otherwise
+                    color: selectedSize === size ? 'white' : 'black',  // White text when selected, black otherwise
+                    border: '1px solid #ccc',
+                    cursor: 'pointer',
+                    borderRadius: '5px',
+                   
+                  }}
               >
                 {size}
               </div>

@@ -27,7 +27,7 @@ const Navbar=()=>{
         <div className="nav_logo">
                 <Link style={{textDecoration:'none'}} to='/'>
                     <img src={logo} alt="Shopper Logo"/>
-                    <p>SHOPPER</p>
+                    
                 </Link>
         </div>
         <ul className="navmenu">

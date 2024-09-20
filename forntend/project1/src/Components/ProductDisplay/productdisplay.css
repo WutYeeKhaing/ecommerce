@@ -60,13 +60,16 @@
     display: flex;
     margin: 10px 15px;
     gap: 20px;
+    
 }
 .right-sizes div{
-    background-color: rgb(242, 244, 246);
-    border: 1px solid white;
+    background-color: white; /* Default background color */
+    border: 1px solid #ccc;
     border-radius: 10px;
     cursor: pointer;
     padding: 10px 15px;
+    color: black; /* Default text color */
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 .product-right button{
     padding: 16px;
@@ -79,7 +82,7 @@
     margin-bottom: 15px;
     border: none;
     outline: none;
-    cursor: pointer;  
+    cursor: pointer;
 }
 .right-category{
     margin-top: 20px;
@@ -266,10 +269,13 @@
         font-size: 18px;
         margin-top: 10px;
     }
+    
     .right-size h1 {
         font-size: 14px;
+
     }
     .right-sizes div {
+        margin-left: 5px;
         padding: 10px 16px; /* Adjust padding for size options */
     }
     .right-star {

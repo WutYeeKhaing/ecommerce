@@ -1,6 +1,6 @@
 .hero {
     height: 70vh;
-    background: linear-gradient(180deg, rgb(186, 127, 192), rgb(228, 222, 222) 50%);
+    background: linear-gradient(180deg,rgb(243, 205, 246), rgb(249, 235, 235) 60%);
     display: flex;
 }
 
@@ -52,6 +52,12 @@
     cursor: pointer;
 }
 
+
+/* Optionally, change background color on hover */
+.hero-lastest-btn:hover {
+    background-color: rgb(145, 105, 183);
+    color: white;
+}
 .hero-right img {
     height: 70vh;
 }

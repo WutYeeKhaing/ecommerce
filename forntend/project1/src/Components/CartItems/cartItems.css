@@ -65,22 +65,30 @@
 .cart-promocode p{
     color: rgb(48, 47, 47);
 }
-.promobox{
+.promobox {
+    display: flex; /* Align input and button in one row */
     width: 385px;
     margin-top: 20px;
     padding-left: 20px;
+    border: none;
+    outline: none;
     height: 50px;
     background-color: rgb(234, 222, 234);
 }
-.promobox input{
+
+.promobox input {
     border: none;
     outline: none;
     background-color: transparent;
     font-size: 17px;
-    width: 265px;
+    width: 100%; /* Take full available space */
     height: 45px;
+    flex-grow: 1; /* Allow input to grow */
 }
-.promobox button{
+
+.promobox button {
+    border: none;
+    outline: none;
     width: 100px;
     height: 50px;
     font-size: 15px;
@@ -88,9 +96,10 @@
     background-color: rgb(47, 46, 46);
     border-radius: 5px;
     color: rgb(157, 90, 157);
-    border: none;
     cursor: pointer;
+    margin-left: 10px; /* Space between input and button */
 }
+
 @media(max-width:1280px) {
     .cartitem{
         margin: 60px 50px;
@@ -124,17 +133,20 @@
         height: 45px;
         font-size: 13px;
    }
-   .promobox{
-        width: auto;
-        max-width: 385px;
-   }
-   .promobox input{
-        width: 101%;
-   }
-   .promobox button{
-        width: 100px;
-        margin-left: -104px;
-   }
+   .promobox {
+    width: auto;
+    max-width: 385px;
+}
+
+.promobox input {
+    width: 100%; /* Make sure input is responsive */
+    margin-top: 3px;
+}
+
+.promobox button {
+    width: 100px;
+    margin-left: 10px; /* Ensure space between input and button */
+}
 }
 @media(max-width:500px) {
     .main{

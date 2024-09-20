@@ -92,4 +92,12 @@
         padding-left: 0px;
     }
 }
-
+@media (max-width: 480px) {
+   
+    .related-item{
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        width: 95%;
+        padding-right: 8px;
+     }
+}

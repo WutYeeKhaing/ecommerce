@@ -36,7 +36,7 @@ import p35_img from "./product_35.png";
 import p36_img from "./product_36.png";
 
 let all_product = [
-  { id: 1, name: "Women's Striped Casual Blouse", category: "women", image: p1_img, new_price: 50.0, old_price: 80.5 },
+  { id: 1, name: "Women's Striped Casual Blouse", category: "women", image: p1_img, new_price: 50.0, old_price: 100.5 },
   { id: 2, name: "Women's Peplum Hem Formal Top", category: "women", image: p2_img, new_price: 85.0, old_price: 120.5 },
   { id: 3, name: "Women's Casual Ruffle Sleeve Top", category: "women", image: p3_img, new_price: 60.0, old_price: 100.5 },
   { id: 4, name: "Women's Elegant Flutter Sleeve Blouse", category: "women", image: p4_img, new_price: 100.0, old_price: 150.0 },
@@ -47,11 +47,11 @@ let all_product = [
   { id: 9, name: "Women's Casual Chic Button-Up Blouse", category: "women", image: p9_img, new_price: 65.0, old_price: 100.5 },
   { id: 10, name: "Women's Modern Striped Sleeve Blouse", category: "women", image: p10_img, new_price: 80.0, old_price: 110.0 },
   { id: 11, name: "Women's Relaxed Fit Collar Top", category: "women", image: p11_img, new_price: 81.5, old_price: 110.5 },
-  { id: 12, name: "Women's Bell Sleeve Office Blouse", category: "women", image: p12_img, new_price: 80.0, old_price: 150.5 },
+  { id: 12, name: "Women's Bell Sleeve Office Blouse", category: "women", image: p12_img, new_price: 80.0, old_price: 160.5 },
   { id: 13, name: "Men's Green Slim Fit Bomber Jacket", category: "men", image: p13_img, new_price: 61.0, old_price: 80.6 },
   { id: 14, name: "Men's Black Zippered Bomber Jacket", category: "men", image: p14_img, new_price: 75.0, old_price: 90.9 },
   { id: 15, name: "Men's Navy Blue Hooded Jacket", category: "men", image: p15_img, new_price: 55.0, old_price: 90.5 },
-  { id: 16, name: "Men's Casual Bomber Jacket", category: "men", image: p16_img, new_price: 45.0, old_price: 100.8 },
+  { id: 16, name: "Men's Casual Bomber Jacket", category: "men", image: p16_img, new_price: 45.0, old_price: 90.8 },
   { id: 17, name: "Men's Olive Green Quilted Jacket", category: "men", image: p17_img, new_price: 75.9, old_price: 150.8 },
   { id: 18, name: "Men's Khaki Zippered Bomber Jacket", category: "men", image: p18_img, new_price: 81.0, old_price: 110.0 },
   { id: 19, name: "Men's Winter Full-Zip Bomber Jacket", category: "men", image: p19_img, new_price: 68.0, old_price: 90.5 },
@@ -122,8 +122,8 @@ let all_product = [
     name: "Boys Maroon Printed Hoodie",
     category: "kid",
     image: p33_img,
-    new_price: 105.0,
-    old_price: 145.0,
+    new_price: 75.0,
+    old_price: 150.0,
   },
   {
     id: 34,
