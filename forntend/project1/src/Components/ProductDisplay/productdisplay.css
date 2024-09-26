@@ -28,10 +28,14 @@
     margin-top: 10px;
     margin-bottom:10px;
 }
-.product-right h1{
-    font-size: 30px;
-    font-weight: 700;
-}
+.product-right h1 {
+    text-align: left; /* Aligns the text to the left */
+    max-width: 300px; /* Sets a small width */
+    width: 100%; /* Allows the h1 to shrink/grow within the max-width */
+    max-width: 500px;
+    margin: 0; /* Removes default margins */
+    word-wrap: break-word; /* Handles long text */
+  }
 .right-star{
     display: flex;
     align-items: center;
@@ -50,12 +54,15 @@
     color:rgb(117, 114, 114);
     text-decoration: line-through;
 }
-.right-size h1{
+.right-size h1 {
     color: rgb(85, 82, 82);
     font-size: 25px;
     font-weight: 600;
-    padding-top: 10px;
+    text-align: left; /* Align text to the right */
+    margin-left: 0px; /* Adjust this value to align properly */
+    margin-right: auto; /* Ensure it pushes to the right */
 }
+
 .right-sizes{
     display: flex;
     margin: 10px 15px;
@@ -165,6 +172,7 @@
     }
     .product-right h1{
         font-size: 16px;
+        margin-top: 0px;
     }
     .right-star img{
         font-size: 13px;
@@ -211,7 +219,7 @@
 
     .Main-img {
         width: 300px;
-        height: 335px;
+        height: 360px;
     }
 
     .product-right {
@@ -228,6 +236,7 @@
     .right-size h1 {
         margin-top: 10px;
         font-size: 16px;
+        margin-left: 0px;
     }
 
     .right-sizes div {
@@ -263,16 +272,18 @@
     }
     .Main-img {
         width: 260px;
-        height: 320px; /* Adjust main image size for mobile */
+        height: 330px; /* Adjust main image size for mobile */
     }
     .product-right h1 {
         font-size: 18px;
         margin-top: 10px;
+        margin-right: 0px;
     }
     
     .right-size h1 {
         font-size: 14px;
-
+        margin-top: 10px;
+        margin-right: 0px;
     }
     .right-sizes div {
         margin-left: 5px;

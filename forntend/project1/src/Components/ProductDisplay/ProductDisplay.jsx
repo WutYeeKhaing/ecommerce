@@ -78,7 +78,7 @@ const ProductDisplay = (props) =>{
             </p>
             <p className="right-category">
                 <span>Tags:</span>
-                Modern,Latest,
+                Modern,Latest
             </p>
         </div>
     </div>
