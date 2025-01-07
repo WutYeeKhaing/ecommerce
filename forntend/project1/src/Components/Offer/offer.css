@@ -58,13 +58,13 @@
 }
 @media(max-width:1280px){
     .offers{
-        padding: 0px 90px;
+        padding: 0px 120px;
         margin-bottom: 80px;
         margin-top: -30px;
-        width: 800px;
+        width: 850px;
     }
     .offers-left h1{
-        font-size: 40px;
+        font-size: 30px;
         margin-bottom: 0px;
     }
     .offers-left p{
@@ -72,7 +72,7 @@
         
     }
     .offers-right img{
-         width: 250px;
+         width: 200px;
     }
     .offers-left button{
         width: 220px;
@@ -86,7 +86,8 @@
 @media(max-width:1024px){
     .offers{
         margin-bottom: 60px;
-        height: 40vh;
+        padding: 0 70px;
+        height: 45vh;
         width: 600px;
         margin-top: -50px;
 
@@ -130,64 +131,62 @@
        
     }
     .offers-left button{
-        width: 120px;
+        width: 110px;
         height: 30px;
         font-size: 10px;
+        margin-top: 8px;
     }
     .offers-right{
-        padding-top: 10px;
+        padding-top: 5px;
     }
 }
 @media(max-width: 560px){
     .offers{
-        padding: 0 90px;
-       
-        width: 400px;
+        padding: 0 70px;
+        height: 28vh;
+        width: 350px;
         margin-bottom: 50px;
        
     }
     .offers-left h1{
-        font-size: 16px;
+        font-size: 26px;
+        width: 200px;
     }
     .offers-left p{
-        font-size: 10px;
+        font-size: 14px;
     }
     .offers-right img{
-         width: 130px;
+        display: none;
     }
     .offers-left button{
-        width: 120px;
-        height: 30px;
-        font-size: 10px;
+        width: 140px;
+        height: 40px;
+        font-size: 12px;
     }
-    .offers-right{
-        padding-top: 10px;
-    }
+  
 }
 @media(max-width: 480px) {
     .offers {
-        padding: 0 40px; /* Adjust padding */
+       
         width: 85%; /* Full width */
-        height: auto; /* Adjust height as needed */
-        margin-bottom: 50px; /* Adjust margin */
+        padding: 0 70px;
+        height: 12vh;
+        width: 350px;
+        margin-bottom: 50px;
         margin-top: -190px; /* Adjust as needed */
     }
     .offers-left h1 {
-        font-size: 12px; /* Smaller font size */
+        font-size: 16px; /* Smaller font size */
     }
     .offers-left p {
-        font-size: 8px; /* Smaller font size */
+        font-size: 10px; /* Smaller font size */
     }
-    .offers-right img {
-        width: 100px; /* Adjust image size */
-    }
+   
     .offers-left button {
         width: 100px; /* Adjust button size */
         height: 25px; /* Adjust height */
-        font-size: 8px; /* Smaller font size */
-        margin-top: 5px;
+        font-size: 9px; /* Smaller font size */
+        margin-top: 8px;
     }
-    .offers-right {
-        padding-top: 10px; /* Adjust padding */
-    }
+  
 }

@@ -1,75 +1,116 @@
 import React, { useState } from 'react';
 import './CSS/Loginsignup.css';
-
 const LoginSignUp = () => {
   const [mode, setMode] = useState('login'); // Modes: 'login', 'signup', 'forgotPassword'
   const [formData, setFormData] = useState({ name: '', email: '', password: '' });
   const [resetEmail, setResetEmail] = useState(''); // For "Forgot Password"
   const [error, setError] = useState('');
-  const [message, setMessage] = useState(''); // Display success or error messages
-
-  // Handle input changes for signup/login forms
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
-
   // Handle form submission
-  const handleSubmit = (e) => {
+   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    if (mode === 'signup') {
-      handleSignUp();
-    } else if (mode === 'login') {
-      handleLogin();
+    setError(''); // clear the previous error message before submitting again
+    try{
+        if (mode === 'signup') {
+          await handleSignUp();
+          } else if (mode === 'login') {
+            await handleLogin();
+        }
+    } catch(error){
+        setError(error.message);
+      console.error("Error during form submission:", error);
     }
   };
+  const handleSignUp = async () => {
+          try{
+                const response = await fetch('http://localhost:4000/signup', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                      username: formData.name,
+                       email: formData.email,
+                      password: formData.password,
+                  }),
+                });
+            if(!response.ok){
+                 const message = `HTTP error! status: ${response.status}`;
+                throw new Error(message);
+            }
+                const data = await response.json();
 
-  // Simulate Sign Up
-  const handleSignUp = () => {
-    const users = JSON.parse(localStorage.getItem('users')) || [];
-    const userExists = users.some((user) => user.email === formData.email);
-
-    if (userExists) {
-      setError('An account with this email already exists.');
-    } else {
-      users.push({
-        name: formData.name,
-        email: formData.email,
-        password: formData.password,
-      });
-      localStorage.setItem('users', JSON.stringify(users));
-      setMessage('Sign up successful! Please log in.');
-      setMode('login'); // Switch to login after sign-up
-    }
-  };
-
-  // Simulate Login
-  const handleLogin = () => {
-    const users = JSON.parse(localStorage.getItem('users')) || [];
-    const user = users.find(
-      (user) => user.email === formData.email && user.password === formData.password
-    );
-
-    if (user) {
-      setMessage('Login successful! Welcome back.');
-      // You can add redirection logic to the dashboard/home page here
-    } else {
-      setError('Invalid email or password. Please try again.');
-    }
-  };
-
-  // Simulate Forgot Password functionality
-  const handleForgotPassword = () => {
-    const users = JSON.parse(localStorage.getItem('users')) || [];
-    const user = users.find((user) => user.email === resetEmail);
-
-    if (user) {
-      setMessage(`A password reset link has been sent to ${resetEmail}.`);
-    } else {
-      setError('No account found with this email.');
-    }
-  };
+                if(data.success){
+                       alert('Signup Successfull!! Please Login with your credentials.');
+                       setMode('login')
+                  }else{
+                        if (data.errors === 'existing'){
+                                throw new Error('Email already registered!!');
+                             }
+                    }
+           }
+        catch(error){
+            setError(`Failed to Sign up, Message: ${error.message}`);
+        }
+   };
+  const handleLogin = async () => {
+     try {
+         const response = await fetch('http://localhost:4000/login', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+              email: formData.email,
+              password: formData.password,
+            }),
+          });
+          if (!response.ok) {
+               const message = `HTTP error! status: ${response.status}`;
+             throw new Error(message);
+            }
+             const data = await response.json();
+            if (data.success) {
+               alert('Login Successful !!');
+                  // You can add redirection logic to the dashboard/home page here
+              }
+          else {
+            throw new Error(data.error || 'Invalid credentials. Please try again');
+             }
+          }
+          catch(error){
+            setError(`Login Failed, Message: ${error.message}`);
+        }
+    };
+    // Simulate Forgot Password functionality
+   const handleForgotPassword = async () => {
+      try {
+            const response = await fetch('http://localhost:4000/forgotpassword', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+              },
+              body: JSON.stringify({
+                email: resetEmail,
+              }),
+            });
+             if(!response.ok){
+                const message = `HTTP error! status: ${response.status}`;
+                  throw new Error(message);
+            }
+             const data = await response.json();
+              if (data.success) {
+                   alert(`A password reset link has been sent to ${resetEmail}.`);
+              } else {
+                    throw new Error(data.error || 'No account found with this email.');
+              }
+            } catch (error) {
+                  setError(`Reset password failed, message: ${error.message}`);
+             }
+          };
 
   return (
     <div className="loginsignup">
@@ -109,26 +150,23 @@ const LoginSignUp = () => {
 
             {/* Error and success messages */}
             {error && <p className="error">{error}</p>}
-            {message && <p className="message">{message}</p>}
 
             <button type="submit" className='button'>{mode === 'signup' ? 'Sign Up' : 'Login'}</button>
           </form>
         )}
-
         {/* Forgot Password Form */}
         {mode === 'forgotPassword' && (
-          <div className="forgot-password">
+            <div className="forgot-password">
             <input
-              type="email"
-              placeholder="Enter your email"
-              value={resetEmail}
-              onChange={(e) => setResetEmail(e.target.value)}
-              required
+                type="email"
+                placeholder="Enter your email"
+                value={resetEmail}
+                onChange={(e) => setResetEmail(e.target.value)}
+                required
             />
             <button onClick={handleForgotPassword}>Reset Password</button>
-          </div>
-        )}
-
+            </div>
+          )}
         {/* Toggle between modes */}
         <p className="login">
           {mode === 'signup' ? (

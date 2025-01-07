@@ -2,6 +2,8 @@
     height: 70vh;
     background: linear-gradient(180deg,rgb(243, 205, 246), rgb(249, 235, 235) 60%);
     display: flex;
+    position: relative;
+    overflow: hidden;
 }
 
 .hero-left {
@@ -12,6 +14,7 @@
     gap: 20px;
     padding-left: 130px;
     line-height: 1;
+    z-index: 1;
 }
 
 .hero-left h2 {
@@ -45,53 +48,110 @@
     height: 45px;
     border-radius: 50px;
     margin-top: 10px;
-    background: rgb(137, 104, 140);
     color: rgb(255, 242, 224);
     font-size: 15px;
     font-weight: 500;
     cursor: pointer;
-}
-
-
-/* Optionally, change background color on hover */
-.hero-lastest-btn:hover {
-    background-color: rgb(145, 105, 183);
-    color: white;
-}
-.hero-right img {
-    height: 70vh;
+    transition: background-color 0.3s ease;
 }
 
 .hero-right {
     flex: 1;
+    position: relative;
     display: flex;
-    align-items: flex-start;
-    justify-self: start;
+    justify-content: center;
+}
+
+.hero-right img {
+    height: 70vh;
+    object-fit: cover;
+    position: absolute;
+    bottom: 0;
+    right: 25%;
+}
+.nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.8);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 2;
+    transition: background 0.3s ease;
+}
+
+.nav-button:hover {
+    background: rgba(255, 255, 255, 1);
+}
+
+.nav-button.left {
+    left: 20px;
+}
+
+.nav-button.right {
+    right: 20px;
+}
+
+.nav-icon {
+    width: 24px;
+    height: 24px;
+    color: rgb(119, 81, 127);
+}
+
+/* Navigation Dots */
+.nav-dots {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 2;
+}
+
+.nav-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.nav-dot.active {
+    background: rgb(115, 114, 116);
 }
 
 @media (max-width: 1280px) {
     .hero-left {
         padding-left: 100px;
     }
-
+    
     .hero-left h2 {
         font-size: 22px;
     }
-    .hero-left p{
-        font-size: 50px;
+    .hero-left p {
+        font-size: 40px;
     }
     .hand-icon img {
-        width: 80px;
+        width: 50px;
     }
-    .hero-lastest-btn{
+    .hero-lastest-btn {
         gap: 10px;
         width: 250px;
         height: 60px;
-       
     }
-    .hero-right img{
-        width: 500px;
-
+    .hero-right img {
+        height: 70vh;
+        width: auto;
+        right: 20%;
     }
 }
 
@@ -99,90 +159,111 @@
     .hero-left {
         padding-left: 80px;
     }
-
+    
     .hero-left h2 {
         font-size: 20px;
     }
-
     .hero-left p {
         font-size: 35px;
     }
-
     .hand-icon img {
-        width: 50px;
+        width: 45px;
     }
-
     .hero-lastest-btn {
         width: 220px;
         height: 40px;
         font-size: 12px;
-      
     }
-    .hero-right img{
-        width: 400px; 
+    .hero-right img {
+        height: 70vh;
+        width: auto;
+        right: 15%;
     }
 }
 
 @media (max-width: 800px) {
-    .hero{
+    .hero {
         height: 45vh;
     }
     .hero-left {
         padding-left: 80px;
     }
-
     .hero-left h2 {
         font-size: 18px;
     }
-
     .hero-left p {
         font-size: 30px;
     }
-
     .hand-icon img {
         width: 40px;
     }
-
     .hero-lastest-btn {
         width: 200px;
         height: 40px;
         font-size: 10px;
-        
     }
-    .hero-right img{
-        width: 250px;
-        height: 370px;
+    .hero-right img {
+        height: 45vh;
+        width: auto;
+        right: 10%;
     }
+    .nav-button {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .nav-icon {
+        width: 20px;
+        height: 20px;
+    }
+    .nav-dot {
+        width: 8px;
+        height: 8px;
+    }
+    
+    .nav-dots {
+        gap: 8px;
+        bottom: 15px;
+    }
+
 }
 
 @media (max-width: 500px) {
-    .hero{
+    .hero {
         flex-direction: column;
         height: 40vh;
         align-items: center;
     }
-
     .hero-right {
         display: none;
     }
     .hero-left {
-        width: 100%; /* Take full width */
-        align-items: center; /* Center the content */
-        padding-left: 0; /* Remove left padding */
+        width: 100%;
+        align-items: center;
+        padding-left: 0;
     }
-
     .hero-left h2 {
-        font-size: 25px;
+        font-size: 24px;
     }
-
+    .hero-left p{
+        font-size: 30px;
+    }
     .hand-icon img {
-        width: 40px;
+        width: 32px;
     }
-
     .hero-lastest-btn {
         width: 220px;
         height: 40px;
         font-size: 13px;
-       
+    }
+    .nav-dot {
+        width: 6px;
+        height: 6px;
+    }
+    
+    .nav-dots {
+        gap: 6px;
+        bottom: 10px;
     }
 }
+

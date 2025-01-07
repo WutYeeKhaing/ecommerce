@@ -31,12 +31,13 @@
     border: 1px solid rgb(227, 227, 227)
 }
 .newsletter input{
-    width:500px;
-    margin-left: 30px;
+    width: 500px;
+    margin-left: 0px;
     border: none;
     outline:none;
+    margin: 10px; /* Adjust margin */
     color:rgb(13, 11, 14);
-    font-family: 'Poppins','Courier New', Courier;
+
     font-size: 16px;
     background-color: rgb(251, 238, 238);
 }

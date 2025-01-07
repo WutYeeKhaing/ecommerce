@@ -1,3 +1,4 @@
+/* Existing Styles (Keep these as they are in the code you provided) */
 .cartitem{
     margin:100px 170px;
 }
@@ -57,6 +58,9 @@
     background-color:rgb(230, 183, 230);
     cursor: pointer;
 }
+.total-cart button:hover{
+    background-color:  rgb(157, 90, 157);
+}
 .cart-promocode{
     flex:1;
     font-size: 16px;
@@ -89,50 +93,18 @@
 .promobox button {
     border: none;
     outline: none;
-    width: 100px;
+    width: 160px;
     height: 50px;
     font-size: 15px;
     font-weight: 600;
     background-color: rgb(47, 46, 46);
-    border-radius: 5px;
-    color: rgb(157, 90, 157);
+    border-radius: 20px;
+    color: white;
     cursor: pointer;
-    margin-left: 10px; /* Space between input and button */
-}
-.payment-options {
-
+    margin-right: -15px; /* Space between input and button */
 }
 
-.payment-options h2 {
-    margin-bottom: 15px; /* Space below the heading */
-    color: #333; /* Darker text color */
-}
 
-.payment-methods {
-    display: flex;
-    flex-direction: column; /* Stack options vertically */
-}
-
-.payment-method {
-    display: flex;
-    align-items: center; /* Center items vertically */
-    margin: 10px 0; /* Space between options */
-    cursor: pointer; /* Pointer cursor on hover */
-}
-
-.payment-method input {
-    margin-right: 10px; /* Space between radio button and icon */
-    cursor: pointer; /* Pointer cursor on hover */
-}
-
-.payment-options button{
-    width: 150px;
-    height: 50px;
-    outline: none;
-    border: none;
-    background-color:rgb(230, 183, 230);
-    cursor: pointer;
-}
 @media(max-width:1280px) {
     .cartitem{
         margin: 60px 50px;
@@ -190,4 +162,221 @@
         grid-template-columns: .5fr 3fr .5fr;
         gap: 20px;
     }
+}
+
+/* Address Section Styles */
+.address-section {
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    box-sizing: border-box; /* Ensure padding is included in the width */
+}
+
+.address-section h2 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 1.3em;
+    color: #333;
+}
+
+.address-section .section-icon {
+    margin-right: 10px;
+    font-size: 1.3em;
+    color: #555;
+}
+
+.address-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns for fields */
+    gap: 15px;
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+
+.address-field {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 0px 10px;
+    box-sizing: border-box; /* Include padding in field */
+    background-color: white; /* Adding a white background to the input box */
+  
+}
+
+
+.address-field .field-icon {
+    margin-right: 8px;
+    color: #777;
+}
+
+
+.address-field input {
+     width: 100%;
+    padding: 1rem 1rem 1rem 3rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+    margin-top: 10px;
+  
+}
+
+.address-field ::placeholder {
+    color: #aaa;
+}
+
+.address-container .submit-button {
+    background-color:rgb(230, 183, 230);
+    color: black;
+    border: none;
+    padding: 10px 15px;
+    margin-top: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    grid-column: 1 / -1;
+    align-self: flex-end;
+    justify-self: end;
+
+}
+
+.address-container .submit-button:hover {
+    background-color:  rgb(227, 154, 227);
+}
+
+/* Payment Section Styles */
+.payment-section {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.payment-section h2 {
+    margin-bottom: 20px;
+    font-size: 1.3em;
+    color: #333;
+}
+
+
+.payment-methods {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    width: 100%;
+    max-width: 600px;
+}
+
+.payment-method {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+    transition: border-color 0.3s;
+    width: calc(30% - 30px);
+    min-width: 100px;
+    box-sizing: border-box;
+}
+
+.payment-method:hover,
+.payment-method.selected {
+    border-color: #007bff;
+    box-shadow: 0 2px 5px rgba(0, 123, 255, 0.2);
+}
+
+.payment-method input[type="radio"] {
+    display: none;
+}
+
+.payment-method span {
+    margin-top: 8px;
+    color: #333;
+    font-size: 0.9em;
+}
+.payment-form{
+    margin-top: 20px;
+    width: 80%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-group {
+    width: 100%;
+}
+.payment-input {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 0.9em;
+    width: 100%;
+    box-sizing: border-box;
+    outline: none;
+}
+.form-row {
+    display: flex;
+    gap: 10px;
+}
+.form-group.half {
+    width: 50%;
+}
+
+
+.payment-section .confirm-button {
+    margin-top: 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.payment-section .confirm-button:hover {
+    background-color: #0056b3;
+}
+
+
+/* Responsive Adjustments (For smaller screens) */
+@media (max-width: 768px) {
+
+    .address-container {
+        grid-template-columns: 1fr; /* Single column on small screens */
+    }
+  .payment-methods {
+        flex-direction: column;
+    }
+    .payment-method{
+        width: auto;
+    }
+    .form-row {
+        flex-direction: column;
+    }
+
+    .form-group.half {
+        width: 100%;
+    }
+
+
 }

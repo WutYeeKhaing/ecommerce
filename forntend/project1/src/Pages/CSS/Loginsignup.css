@@ -1,207 +1,193 @@
 /* Global Styles */
 
-  /* Loginsignup Container */
-  .loginsignup {
-    width: 100%;
-    height: 80vh;
-   
-    padding-top: 0px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  /* Login Container */
+/* Loginsignup Container */
+.loginsignup {
+  width: 100%;
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8f8f8; /* Very light grey */
+}
+
+/* Login Container */
+.login-container {
+  width: 90%;
+  max-width: 500px;
+  background-color: #ffffff; /* White */
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Refined shadow */
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Heading */
+h1 {
+  text-align: center;
+  color: #2c3e50; /* Dark blue grey */
+  font-size: 28px;
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+
+/* Form Styling */
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* Input Fields */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  padding: 10px;
+  margin-bottom: 10px;
+ 
+  border-radius: 6px;
+  font-size: 16px;
+  color: #34495e; /* Dark grey */
+  transition: border-color 0.3s ease;
+  outline: none;
+  border: none;
+}
+
+.login-container input{
+  background-color: rgb(224, 207, 239);
+}
+
+/* Button */
+.button {
+  background-color:rgb(230, 183, 230);
+  color: #000; /* White */
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-bottom: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color:  rgb(227, 154, 227);
+}
+
+/* Messages */
+.message,
+.error {
+  text-align: center;
+  font-size: 15px;
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+.message {
+  color: #27ae60; /* Green */
+}
+
+.error {
+  color: #c0392b; /* Red */
+}
+
+/* Additional Styling */
+.login {
+  text-align: center;
+  margin-top: 25px;
+  font-size: 16px;
+}
+
+.login span {
+  color: #3498db;
+  cursor: pointer;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+.login span:hover {
+color: #2980b9;
+}
+
+.login-agree {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  margin-top: 20px;
+  color: #777;
+}
+
+.login-agree input {
+  margin-right: 10px;
+}
+
+/* Forgot Password */
+.forgot-password {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0px;
+}
+
+.forgot-password input {
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #34495e;
+  transition: all 0.3s ease;
+  outline: none;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.forgot-password button {
+  width: 100%;
+   box-sizing: border-box;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
   .login-container {
-    width: 500px;
-    height: 550px;
-    background-color: rgb(250, 238, 253); /* Soft container color */
-    padding: 30px 70px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+      padding: 30px;
   }
-  
-  /* Heading */
   h1 {
-    text-align: center;
-    color: #333;
-    font-size: 24px;
-    margin-bottom: 30px;
-    font-weight: 700;
+      font-size: 24px;
   }
-  
-  /* Form Styling */
-  form {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-  }
-  
-  /* Input Fields */
-  input[type="text"],
+    input[type="text"],
   input[type="email"],
   input[type="password"] {
     padding: 12px;
-    margin-bottom: 15px;
-   
-    border-radius: 5px;
-    font-size: 16px;
-    color: rgb(108, 105, 105);
-    transition: all 0.3s ease;
+    font-size: 15px;
   }
-  
-  input[type="text"]:focus,
-  input[type="email"]:focus,
-  input[type="password"]:focus {
-    
-    outline: none;
-   
-  }
-  
-  /* Button */
   .button {
-    background-color: rgb(249, 224, 249); /* Button background */
-    color: rgb(52, 37, 12);
-    padding: 12px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    margin-bottom: 15px;
-    transition: background-color 0.3s ease;
-   
+      padding: 12px;
+      font-size: 15px;
   }
-  
-  .button:hover {
-    background: rgb(179, 129, 226);
-    color: white;
+  .login-agree{
+      font-size: 13px;
   }
-  
-  /* Messages */
-  .message,
-  .error {
-    text-align: center;
-    font-size: 14px;
-    margin-bottom: 15px;
-  }
-  
-  .message {
-    color: green;
-  }
-  
-  .error {
-    color: red;
-  }
-  
-  /* Additional Styling */
-  .login {
-    text-align: center;
-    margin-top: 20px;
-  }
-  
-  .login span {
-    color: rgb(157, 90, 157); /* Matching the focus color */
-    cursor: pointer;
-    font-weight: bold;
-  }
-  
-  .login-agree {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 14px;
-    margin-top: 20px;
-    color: rgb(102, 100, 100);
-  }
-  
-  .login-agree input {
-    margin-right: 8px;
-  }
-  
-  /* Forgot Password */
-  .forgot-password {
-    padding: 12px;
-    margin-bottom: 15px;
-   
-    border-radius: 5px;
-    font-size: 16px;
-    color: rgb(108, 105, 105);
-    transition: all 0.3s ease;
-    width: 100%; /* Ensure it fits within the container */
-    box-sizing: border-box;
-  }
-  
-  .forgot-password input {
-    margin-bottom: 10px;
-    padding: 10px;
-    width: 100%;
-    box-sizing: border-box;
-  }
-  
-  .forgot-password button {
-    width: 100%;
-    box-sizing: border-box;
-  }
-  
-  /* Media Queries */
-  @media (max-width: 768px) {
-    .login-container {
-        width: 90%; /* Changed from auto to percentage */
-        max-width: 400px; /* Added max-width */
-        padding: 30px 40px;
-      }
-  
-    h1 {
-      font-size: 20px;
-    }
-  
-    button {
-      padding: 10px;
-      font-size: 14px;
-    }
-  
-    input[type="text"],
-    input[type="email"],
-    input[type="password"] {
-      padding: 10px;
-      font-size: 14px;
-    }
-    .login-agree{
-        width: 320px;
-        padding: 0px 0px ;
-    }
-   
 }
-  
-  @media (max-width: 480px) {
-    .login-container {
-        width: 95%; /* Adjusted for smaller screens */
-        padding: 20px;
-      }
-  
-    h1 {
-      font-size: 18px;
-    }
-  
-    button {
-      padding: 8px;
-      font-size: 12px;
-    }
-  
-    input[type="text"],
-    input[type="email"],
-    input[type="password"] {
-      padding: 8px;
-      font-size: 12px;
-    }
-    .login-agree{
-        width: 280px;
-        padding: 0px  ;
-    }
+
+@media (max-width: 480px) {
+  .login-container {
+      padding: 25px;
   }
-  
+  h1 {
+      font-size: 22px;
+  }
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+      padding: 10px;
+    font-size: 14px;
+  }
+   .button {
+      padding: 10px;
+      font-size: 14px;
+  }
+  .login-agree{
+      font-size: 12px;
+  }
+}
